@@ -1,7 +1,6 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 body {
@@ -25,6 +24,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 
 header:first-child {
@@ -84,4 +84,17 @@ footer div {
 
 footer div div {
   color: white;
+}
+
+@media only screen and (max-width: 960px) {
+  .nav-menu {
+    visibility: hidden;
+  }
+  .toggler {
+    display: block;
+  }
+
+  header input[type="checkbox"]:checked ~ .nav-menu > ul {
+    visibility: visible;
+  }
 }
