@@ -11,7 +11,6 @@ body {
 
 img.hero-image {
   background: url(../img/showcase.jpeg);
-  display: block;
   position: absolute;
   top: 0;
   left: 0;
@@ -59,6 +58,10 @@ nav ul li {
 nav ul li a {
   color: white;
   text-decoration: none;
+}
+
+.toggler {
+  display: none;
 }
 
 footer {
