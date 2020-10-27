@@ -120,20 +120,16 @@ nav a:hover {
   }
 
   header {
-    display: grid;
-    grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
-  }
-
-  .logo {
-    grid-column: 2 / span 2;
+    display: flex;
+    justify-content: space-between;
   }
 
   nav {
     all: unset;
-    grid-column: 3 /4;
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    margin-right: 1rem;
   }
 
   nav ul {
