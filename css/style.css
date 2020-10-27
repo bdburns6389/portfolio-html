@@ -12,6 +12,19 @@ body {
 }
 
 .hero-image {
+  background: url(../img/keyboard-background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  height: 640px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image > h1 {
+  color: white;
 }
 
 header {
