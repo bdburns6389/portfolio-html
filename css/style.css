@@ -1,100 +1,109 @@
-* {
-  margin: 0;
-  padding: 0;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 body {
-  background-color: black;
+  margin: 0;
+  padding: 0;
+  background-color: #222;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-img.hero-image {
-  background: url(../img/showcase.jpeg);
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 480px;
-  width: 100%;
-  z-index: -1;
-  margin: 0;
-  padding: 0;
-}
-
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  background-color: rebeccapurple;
+  text-align: center;
+  position: fixed;
   width: 100%;
+  z-index: 9999;
 }
 
-header:first-child {
-  padding: 1rem;
+.nav-toggle {
+  position: absolute;
+  top: -99999px;
+  left: -99999px;
 }
 
-header > div > a {
-  color: white;
-  text-decoration: none;
-}
-
-body header {
+.nav-toggle-label {
   position: absolute;
   top: 0;
   left: 0;
+  margin-left: 1em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  display: block;
+  background: white;
+  height: 2px;
+  width: 2em;
+  border-radius: 2px;
+  position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  content: "";
+  position: absolute;
+}
+
+.nav-toggle-label span::before {
+  bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+  top: 7px;
+}
+
+nav {
+  position: absolute;
+  text-align: left;
+  background: rebeccapurple;
   width: 100%;
-  background-color: rebeccapurple;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: transform 400ms ease-in-out;
 }
 
 nav ul {
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 1rem;
-}
-
-nav ul li {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
-nav ul li a {
+nav li {
+  margin-bottom: 1em;
+}
+
+nav a {
   color: white;
   text-decoration: none;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
 }
 
-.toggler {
-  display: none;
+nav a:hover {
+  color: #000;
 }
 
-footer {
-  background-color: rebeccapurple;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+.nav-toggle:checked ~ nav {
+  transform: scale(1, 1);
 }
 
-footer div {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  padding: 1rem;
-}
-
-footer div div {
-  color: white;
-}
-
-@media only screen and (max-width: 960px) {
-  .nav-menu {
-    visibility: hidden;
-  }
-  .toggler {
-    display: block;
-  }
-
-  header input[type="checkbox"]:checked ~ .nav-menu > ul {
-    visibility: visible;
-  }
+.nav-toggle:checked ~ nav a {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 250ms;
 }
