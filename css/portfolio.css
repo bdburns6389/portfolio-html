@@ -1,0 +1,32 @@
+.grid-container {
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 20rem));
+  grid-gap: 2rem;
+  justify-content: center;
+  max-width: 70rem;
+}
+
+.card {
+  background-color: white;
+  border: 1px solid red;
+  text-align: center;
+}
+
+.card-content {
+  margin-bottom: 2rem;
+}
+
+a.btn {
+  text-decoration: none;
+  background-color: lightseagreen;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  margin-bottom: 2rem;
+}
