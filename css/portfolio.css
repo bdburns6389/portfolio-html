@@ -58,8 +58,8 @@ a.btn {
 
 .card-post-meta {
   display: flex;
-  justify-content: space-around;
-  margin-top: auto;
+  justify-content: space-between;
+  gap: 1rem;
   margin-bottom: 1rem;
 }
 
