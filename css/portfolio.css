@@ -1,0 +1,68 @@
+main {
+  max-width: 100vw;
+  min-height: 640px;
+}
+
+header {
+  max-width: 100vw;
+}
+
+.grid-container {
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 20rem));
+  grid-gap: 2rem;
+  justify-content: center;
+  grid-auto-rows: ;
+  max-width: 70rem;
+}
+
+.card {
+  background-color: #333;
+  border: 1px solid white;
+  border-radius: 25px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.card > img {
+  width: 90%;
+  border-radius: 25px;
+  margin-top: 1rem;
+}
+
+.card-content {
+  padding: 1rem;
+  color: white;
+}
+
+a.btn {
+  text-decoration: none;
+  background-color: #2de2e6;
+  color: black;
+  padding: 0.75rem 1.5rem;
+  max-width: 60%;
+  width: 60%;
+  margin-top: auto;
+  margin-bottom: 0;
+  border-radius: 25px;
+}
+
+.card-post-meta {
+  display: flex;
+  justify-content: space-around;
+  margin-top: auto;
+  margin-bottom: 1rem;
+}
+
+.card-post-meta > * {
+  color: white;
+}
