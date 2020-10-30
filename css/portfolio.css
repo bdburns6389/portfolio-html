@@ -44,9 +44,14 @@ header {
 }
 
 .card-content {
+  -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
   padding-left: 1rem;
   padding-right: 1rem;
-  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  max-height: 10ch;
+  text-overflow: ellipsis;
   color: white;
 }
 
