@@ -1,223 +1,227 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 body {
-  min-height: 100vh;
-  max-width: 100vw;
-  margin: 0;
-  padding: 0;
-  background-color: #222;
-  font-family: Arial, Helvetica, sans-serif;
+	min-height: 100vh;
+	max-width: 100vw;
+	margin: 0;
+	padding: 0;
+	background-color: #222;
+	font-family: Arial, Helvetica, sans-serif;
 }
 
 .hero-image {
-  background: url(../img/keyboard-background.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position-x: center;
-  background-position-y: center;
-  height: 640px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	background: url(../img/keyboard-background.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position-x: center;
+	background-position-y: center;
+	height: 640px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .hero-image > h1 {
-  color: white;
+	color: white;
 }
 
 header {
-  background-color: transparent;
-  text-align: left;
-  position: fixed;
-  width: 100%;
-  max-width: 100%;
-  z-index: 9999;
+	background-color: transparent;
+	text-align: left;
+	position: fixed;
+	width: 100%;
+	max-width: 100%;
+	z-index: 9999;
 }
 
 header h1 {
-  color: white;
-  margin-left: 1rem;
-  margin-right: auto;
+	color: white;
+	margin-left: 1rem;
+	margin-right: auto;
 }
 
 .nav-toggle {
-  position: absolute;
-  top: -99999px;
-  left: -99999px;
+	position: absolute;
+	top: -99999px;
+	left: -99999px;
 }
 
 .nav-toggle-label {
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin-right: 1em;
-  height: 100%;
-  display: flex;
-  align-items: center;
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin-right: 1em;
+	height: 100%;
+	display: flex;
+	align-items: center;
 }
 
 .nav-toggle-label span,
 .nav-toggle-label span::before,
 .nav-toggle-label span::after {
-  display: block;
-  background: white;
-  height: 2px;
-  width: 2em;
-  border-radius: 2px;
-  position: relative;
+	display: block;
+	background: white;
+	height: 2px;
+	width: 2em;
+	border-radius: 2px;
+	position: relative;
 }
 
 .nav-toggle-label span::before,
 .nav-toggle-label span::after {
-  content: "";
-  position: absolute;
+	content: "";
+	position: absolute;
 }
 
 .nav-toggle-label span::before {
-  bottom: 7px;
+	bottom: 7px;
 }
 
 .nav-toggle-label span::after {
-  top: 7px;
+	top: 7px;
 }
 
 nav {
-  position: absolute;
-  text-align: left;
-  background: rebeccapurple;
-  width: 100%;
-  position: absolute;
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
-  text-align: center;
-  transform: scale(1, 0);
-  transform-origin: top;
-  transition: transform 400ms ease-in-out;
+	position: absolute;
+	text-align: left;
+	background: rebeccapurple;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	text-align: center;
+	transform: scale(1, 0);
+	transform-origin: top;
+	transition: transform 400ms ease-in-out;
 }
 
 nav ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+	margin: 0;
+	padding: 0;
+	list-style: none;
 }
 
 nav li {
-  margin-bottom: 1em;
+	margin-bottom: 1em;
 }
 
 nav a {
-  color: white;
-  text-decoration: none;
-  font-size: 1.2rem;
-  text-transform: uppercase;
-  opacity: 0;
-  transition: opacity 150ms ease-in-out;
+	color: white;
+	text-decoration: none;
+	font-size: 1.2rem;
+	text-transform: uppercase;
+	opacity: 0;
+	transition: opacity 150ms ease-in-out;
 }
 
 nav a:hover {
-  color: #000;
+	color: #000;
 }
 
 .nav-toggle:checked ~ nav {
-  transform: scale(1, 1);
+	transform: scale(1, 1);
 }
 
 .nav-toggle:checked ~ nav a {
-  opacity: 1;
-  transition: opacity 250ms ease-in-out 250ms;
+	opacity: 1;
+	transition: opacity 250ms ease-in-out 250ms;
 }
 
 main {
-  min-height: 500px;
+	min-height: 500px;
 }
 
 footer {
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  margin-top: 2rem;
-  background: rebeccapurple;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: column;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	margin-top: 2rem;
+	background: rebeccapurple;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-direction: column;
 }
 
 footer > div {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-  text-align: center;
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
+	text-align: center;
 }
 
 footer > div > div {
-  margin-bottom: 0.25rem;
-  color: white;
+	margin-bottom: 0.25rem;
+	color: white;
 }
 
 @media screen and (max-width: 800px) {
-  header {
-    background-color: rebeccapurple;
-  }
+	header {
+		background-color: rebeccapurple;
+	}
 }
 
 @media screen and (min-width: 800px) {
-  .nav-toggle-label {
-    display: none;
-  }
+	.nav-toggle-label {
+		display: none;
+	}
 
-  header {
-    display: flex;
-    justify-content: space-between;
-  }
+	header {
+		display: flex;
+		justify-content: space-between;
+	}
 
-  nav {
-    all: unset;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin-right: 1rem;
-  }
+	nav {
+		all: unset;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		margin-right: 1rem;
+	}
 
-  nav ul {
-    display: flex;
-  }
+	nav ul {
+		display: flex;
+	}
 
-  nav li {
-    margin-left: 3em;
-    margin-bottom: 0;
-  }
+	nav li {
+		margin-left: 3em;
+		margin-bottom: 0;
+	}
 
-  nav a {
-    opacity: 1;
-    position: relative;
-  }
+	nav a {
+		opacity: 1;
+		position: relative;
+	}
 
-  nav a::before {
-    content: "";
-    display: block;
-    height: 5px;
-    background: black;
-    position: absolute;
-    bottom: -0.75em;
-    left: 0;
-    right: 0;
-    transform: scale(0, 1);
-    transform-origin: center;
-    transition: transform ease-in-out 250ms;
-  }
+	nav a::before {
+		content: "";
+		display: block;
+		height: 5px;
+		background: black;
+		position: absolute;
+		bottom: -0.75em;
+		left: 0;
+		right: 0;
+		transform: scale(0, 1);
+		transform-origin: center;
+		transition: transform ease-in-out 250ms;
+	}
 
-  nav a:hover::before {
-    transform: scale(1, 1);
-  }
+	nav a:hover::before {
+		transform: scale(1, 1);
+	}
 
-  footer {
-    flex-direction: row;
-  }
+	footer {
+		flex-direction: row;
+	}
 }
